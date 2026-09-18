@@ -1,4 +1,6 @@
 import random
+from timeit import timeit
+
 
 def factorial(n:int) -> int:
     number = 1
@@ -51,7 +53,14 @@ def generate_permutations(name: str):
 
 
 if __name__ == '__main__':
-    name = input('Enter a name: ')
-    a, b = generate_permutations(name)
-    print(b)
-    print(a)
+    # name = input('Enter a name: ')
+    # a, b = generate_permutations(name)
+    # print(b)
+    # print(a)
+
+    print(
+        timeit(
+            lambda:
+            generate_permutations('sonyaaa'), number=100
+        )
+        )
